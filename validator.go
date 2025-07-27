@@ -42,7 +42,7 @@ func EchoCustomHTTPErrorHandler(err error, c echo.Context) {
 	}
 
 	logrus.WithFields(logrus.Fields{
-		"tag": "GoPackage.EchoCustomHTTPErrorHandler.01",
+		"tag": "GoPackage.Validator.EchoCustomHTTPErrorHandler.01",
 	}).Error(strings.ToLower(cast.ToString(report.Message)))
 
 	c.Logger().Error(report)
