@@ -7,6 +7,7 @@ The `MrAndreID/GoPackage` is a collection of functions for package in Go Languag
 ## Table of Contents
 
 * [Installation](#installation)
+* [Usage](#usage)
 * [Versioning](#versioning)
 * [Authors](#authors)
 * [Contributing](#contributing)
@@ -21,6 +22,23 @@ To use The `MrAndreID/GoPackage`, you must follow the steps below:
 ```go
 go get -u github.com/MrAndreID/gopackage
 ```
+
+## Usage
+
+To use The `MrAndreID/GoPackage`, you must ensure that you meet the following requirements:
+
+### Custom Validator
+
+```go
+import (
+    "github.com/MrAndreID/gopackage"
+	"github.com/labstack/echo/v4"
+)
+
+e := echo.New()
+e.Validator = gopackage.CustomValidator()
+```
+
 
 ## Versioning
 
