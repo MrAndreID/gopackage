@@ -39,6 +39,18 @@ e := echo.New()
 e.Validator = gopackage.CustomValidator()
 ```
 
+### Custom HTTP Error for Echo Framework
+
+```go
+import (
+    "github.com/MrAndreID/gopackage"
+	"github.com/labstack/echo/v4"
+)
+
+e := echo.New()
+e.HTTPErrorHandler = gopackage.EchoCustomHTTPErrorHandler
+```
+
 
 ## Versioning
 
