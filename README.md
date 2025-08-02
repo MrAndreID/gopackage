@@ -51,6 +51,18 @@ e := echo.New()
 e.HTTPErrorHandler = gopackage.EchoCustomHTTPErrorHandler
 ```
 
+### Custom JSON
+
+```go
+import (
+    "github.com/MrAndreID/gopackage"
+	"github.com/labstack/echo/v4"
+)
+
+e := echo.New()
+e.JSONSerializer = gopackage.CustomJSON()
+```
+
 
 ## Versioning
 
