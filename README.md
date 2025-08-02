@@ -63,6 +63,28 @@ e := echo.New()
 e.JSONSerializer = gopackage.CustomJSON()
 ```
 
+### GoRM Data Table
+
+```go
+import (
+    "github.com/MrAndreID/gopackage"
+)
+
+DataTable(
+    ctx,
+    queryBuilder,
+    []string{"name", "level"},
+    "name",
+    "asc",
+    "id",
+    "desc",
+    page,
+    &limit,
+    request.Search,
+    false,
+)
+```
+
 
 ## Versioning
 
