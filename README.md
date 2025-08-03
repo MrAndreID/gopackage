@@ -85,6 +85,18 @@ gopackage.DataTable(
 )
 ```
 
+### Binding Request for Echo Framework
+
+```go
+import (
+    "github.com/MrAndreID/gopackage"
+)
+
+if err := gopackage.EchoBindRequest(c, &req); err != nil {
+    return err
+}
+```
+
 ## Versioning
 
 I use [Semantic Versioning](https://semver.org/). For the versions available, see the tags on this repository. 
