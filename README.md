@@ -70,7 +70,7 @@ import (
     "github.com/MrAndreID/gopackage"
 )
 
-DataTable(
+gopackage.DataTable(
     ctx,
     queryBuilder,
     []string{"name", "level"},
@@ -84,7 +84,6 @@ DataTable(
     false,
 )
 ```
-
 
 ## Versioning
 
