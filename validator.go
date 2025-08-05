@@ -47,6 +47,11 @@ func EchoCustomHTTPErrorHandler(err error, c echo.Context) {
 
 	c.Logger().Error(report)
 
+	if err.Error() == "MAINTENANCE" {
+		report.Code = http.StatusServiceUnavailable
+		report.Message = err
+	}
+
 	c.JSON(report.Code, EchoCustomHTTPErrorResponse{
 		Internal:    report.Internal,
 		Code:        fmt.Sprintf("%04d", report.Code),
