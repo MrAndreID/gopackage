@@ -4,6 +4,8 @@ go 1.24
 
 require (
 	github.com/go-playground/validator/v10 v10.27.0
+	github.com/go-resty/resty/v2 v2.16.5
+	github.com/h2non/filetype v1.1.3
 	github.com/json-iterator/go v1.1.12
 	github.com/labstack/echo/v4 v4.13.4
 	github.com/sirupsen/logrus v1.9.3

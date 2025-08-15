@@ -97,6 +97,38 @@ if err := gopackage.EchoBindRequest(c, &req); err != nil {
 }
 ```
 
+### SeaweedFS Client
+
+```go
+import (
+    "github.com/MrAndreID/gopackage"
+)
+
+seaweedFSData, err := gopackage.NewSeaweedFS("127.0.0.1", "9333", false)
+
+if err != nil {
+    return err
+}
+
+publicURL, err := seaweedFSData.Upload(base64File)
+
+if err != nil {
+    return err
+}
+
+base64File, err := seaweedFSData.Download(publicURL)
+
+if err != nil {
+    return err
+}
+
+err := seaweedFSData.Delete(publicURL)
+
+if err != nil {
+    return err
+}
+```
+
 ## Versioning
 
 I use [Semantic Versioning](https://semver.org/). For the versions available, see the tags on this repository. 
